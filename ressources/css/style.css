@@ -1,1 +1,219 @@
-@import url('https://fonts.googleapis.com/css?family=Montserrat:200,400,400i,700|Roboto+Slab:700');
+@import url("https://fonts.googleapis.com/css?family=Barlow");
+
+/* ===========================
+   Variables
+   =========================== */
+:root {
+  --font-sans: "Barlow", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji",
+    "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  --font-display: "Barlow", serif;
+  --max-width: 1100px;
+  --gap: 1rem;
+  --color-bg: #ffffff;
+  --color-text: #222;
+  --color-muted: #666;
+  --color-primary: #4577ba;
+  --border: #e9e9ee;
+  --radius: 6px;
+}
+
+/* Reset léger */
+* {
+  box-sizing: border-box;
+}
+html,
+body {
+  height: 100%;
+}
+body {
+  font-family: var(--font-sans);
+  background: linear-gradient(180deg, #f7f9ff 0%, var(--color-bg) 60%);
+  color: var(--color-text);
+  margin: 0;
+}
+
+/* Wrapper */
+header,
+main,
+footer {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 1rem;
+}
+header {
+  padding-top: 1.25rem;
+  padding-bottom: 0.75rem;
+}
+
+/* Titre */
+header h1 {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 32px;
+  margin: 0 0 0.6rem 0;
+  color: var(--color-primary);
+  letter-spacing: 0.4px;
+}
+
+/* Navigation */
+nav ul {
+  display: flex;
+  gap: 0.5rem;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  align-items: center;
+  flex-wrap: wrap;
+}
+nav li {
+  margin: 0;
+}
+nav li.hamburger {
+  display: none;
+}
+nav a {
+  display: inline-block;
+  padding: 0.5rem 0.8rem;
+  border-radius: 6px;
+  color: var(--color-text);
+  text-decoration: none;
+  font-weight: 500;
+  transition: all 160ms ease;
+  border: 1px solid transparent;
+}
+nav a:hover {
+  background: rgba(11, 95, 255, 0.08);
+  color: var(--color-primary);
+}
+nav li.active a {
+  background: var(--color-primary);
+  color: #fff;
+  box-shadow: 0 2px 8px rgba(11, 95, 255, 0.12);
+}
+
+/* Main / contenu */
+main {
+  padding: 1.25rem;
+}
+#articles {
+  display: block;
+}
+article {
+  background: #fff;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 1.1rem;
+  box-shadow: 0 6px 18px rgba(20, 30, 60, 0.04);
+  margin-bottom: 1rem;
+}
+article header h2 {
+  margin: 0 0 0.25rem 0;
+  font-family: var(--font-display);
+  font-size: 1.3rem;
+  color: var(--color-text);
+}
+article header p {
+  margin: 0 0 0.65rem 0;
+  color: var(--color-muted);
+  font-size: 0.9rem;
+}
+article p {
+  margin: 0 0 0.8rem 0;
+  color: var(--color-text);
+  font-size: 1rem;
+}
+
+/* Aside simple */
+aside {
+  margin-top: 1rem;
+}
+aside div {
+  background: #fff;
+  border: 1px solid var(--border);
+  padding: 1rem;
+  border-radius: 6px;
+  box-shadow: 0 4px 12px rgba(20, 30, 60, 0.03);
+}
+aside h3 {
+  margin-top: 0;
+  font-size: 1.05rem;
+}
+
+/* Footer */
+footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1.25rem 0;
+  border-top: 1px solid var(--border);
+  margin-top: 2rem;
+}
+#logo {
+  height: 96px;
+  opacity: 0.95;
+}
+
+/* Images */
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Links inside content */
+a {
+  color: var(--color-primary);
+}
+a:hover {
+  text-decoration: underline;
+}
+
+/* Responsive layout */
+@media (min-width: 900px) {
+  main {
+    display: grid;
+    grid-template-columns: 1fr 320px;
+    gap: 1.25rem;
+  }
+  nav li.hamburger {
+    display: none;
+  }
+}
+@media (max-width: 899px) {
+  header h1 {
+    font-size: 0.95rem;
+  }
+  nav li.hamburger {
+    display: list-item;
+  }
+  nav li.hamburger img {
+    width: 28px;
+    height: 28px;
+  }
+  nav ul {
+    gap: 0.35rem;
+  }
+  nav a {
+    padding: 0.45rem 0.6rem;
+    font-size: 0.95rem;
+  }
+  main {
+    padding: 0.8rem;
+  }
+}
+
+/* Petite finition */
+strong {
+  color: var(--color-text);
+  font-weight: 600;
+}
+code {
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, "Roboto Mono",
+    monospace;
+  background: #f4f6fb;
+  padding: 0.15rem 0.35rem;
+  border-radius: 4px;
+  border: 1px solid var(--border);
+  font-size: 0.95em;
+}
