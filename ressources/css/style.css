@@ -53,6 +53,7 @@ nav li {
 }
 nav li.hamburger {
   padding: 8px 14px;
+  display: none;
 }
 nav li.hamburger img {
   width: 24px;
