@@ -1,61 +1,137 @@
-<!doctype html>
+<!DOCTYPE html>
 <html>
-<head>
+  <head>
     <title>64-31 - Projet - Maquettes</title>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="ressources/css/style.css">
-</head>
-<body>
-
-<header>
-    <h1>HES-SO Vs - 64-31 - Web Development</h1>
-    <nav>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="ressources/css/style.css" />
+  </head>
+  <body>
+    <header>
+      <h1>HES-SO Vs - 64-31 - Web Development</h1>
+      <nav>
         <!-- Hamburger -->
         <ul>
-            <li class="hamburger">
-                <img src="ressources/images/hamburger_icon.svg">
-            </li>
-            <li>
-                <a href="description.html">Description</a>
-            </li>
-            <li class="active">
-                <a href="maquettes.html">Maquettes</a>
-            </li>
-            <li>
-                <a href="mockup.html">Mockup</a>
-            </li>
-            <li>
-                <a href="flux.html">Flux</a>
-            </li>
-            <li>
-                <a href="journal_de_bord.html">Journal de bord</a>
-            </li>
+          <li class="hamburger">
+            <img src="ressources/images/hamburger_icon.svg" />
+          </li>
+          <li>
+            <a href="description.html">Description</a>
+          </li>
+          <li class="active">
+            <a href="maquettes.html">Maquettes</a>
+          </li>
+          <li>
+            <a href="mockup.html">Mockup</a>
+          </li>
+          <li>
+            <a href="flux.html">Flux</a>
+          </li>
+          <li>
+            <a href="journal_de_bord.html">Journal de bord</a>
+          </li>
         </ul>
-    </nav>
-</header>
+      </nav>
+    </header>
 
-<main>
-    <!-- Début zone pour votre contenu -->
-    <section id="articles">
+    <main>
+      <!-- Début zone pour votre contenu -->
+      <section id="articles">
         <article>
-            <header>
-                <h2>Maquette visuelle de votre projet</h2>
-                <p>Par la team HES-survivors</p>
-            </header>
-           <p>Mockup général du projet <a href="http://www.hevs.ch/">http://www.hevs.ch/</a>,
-                    <img src="mockupGeneral.jpg" alt="Mockup général du projet">
-                Les obstacles sont illustrés par les logo des technologies.
-                <p>Le code source de l'application est disponible sur le <a href="https://github.com/adrivar/HES-Survivors">github du projet</a>.</p>
+          <header>
+            <h2>Maquette visuelle de notre projet</h2>
+            <p>Par la team HES-survivors</p>
+          </header>
+          <h3>Menu</h3>
+          <p>
+            Écran principal / tutoriel : maquette montrant le menu d'accueil
+            avec le titre, des boutons d'exemple et un arrière-plan représentant
+            la HES de Sierre.
+          </p>
+
+          <img
+            src="/ressources/images/menu/image.png"
+            alt="Exemple de niveau"
+          />
+          <hr />
+          <h3>Personnages</h3>
+
+          <p>
+            Sprites marche (profil droit) : frames inversées pour les
+            déplacements vers la gauche.
+          </p>
+
+          <img
+            src="/ressources/images/spriteSheet/MalewalkRight.png"
+            alt="Sprites - marche droite"
+          />
+          <hr />
+
+          <p>
+            Sprites marche (profil gauche) : frames inversées pour les
+            déplacements vers la gauche.
+          </p>
+
+          <!-- Sprites marche (gauche) -->
+          <img
+            src="/ressources/images/spriteSheet/MalewalkLeft.png"
+            alt="Sprites - marche gauche"
+          />
+          <hr />
+
+          <p>
+            Sprites saut : frames utilisées pour l'animation du saut du
+            personnage.
+          </p>
+          <img
+            src="/ressources/images/spriteSheet/Malejump.png"
+            alt="Sprites - actions de saut"
+          />
+          <hr />
+
+          <p>
+            Attaques / interactions : frames montrant le lancer de livre
+            (attaque) et son impact visuel.
+          </p>
+          <img
+            src="/ressources/images/spriteSheet/Malehit.png"
+            alt="Sprites - attaque (lancer de livre)"
+          />
+          <hr />
+
+          <p>
+            Personnage féminin - marche droite : cycle de marche pour le
+            personnage féminin.
+          </p>
+          <img
+            src="/ressources/images/spriteSheet/femalewalkRight.png"
+            alt="Personnage féminin - marche droite"
+          />
+          <hr />
+
+          <p>
+            Personnage féminin - marche droite : cycle de marche pour le
+            personnage féminin.
+          </p>
+          <img
+            src="/ressources/images/spriteSheet/femalewalkRight.png"
+            alt="Personnage féminin - marche droite"
+          />
+          <hr />
+          <h3>Exemple d'ennemi</h3>
+          <p>Logo java : utilisé pour représenter un ennemi dans le jeu,</p>
+          <img
+            src="/ressources/images/Ennemi/javaEnnemi.png"
+            alt="Personnage féminin - marche droite"
+          />
         </article>
-    </section>
-    <!-- >Fin zone pour votre contenu -->
-</main>
-    
+      </section>
+    </main>
+
     <footer>
-        <img id="logo" src="ressources/images/logo.png">
+      <img id="logo" src="ressources/images/logo.png" />
     </footer>
 
     <script src="ressources/js/script.js"></script>
-</body>
+  </body>
 </html>
